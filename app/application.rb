@@ -10,6 +10,7 @@ def call(env)
    item = @@items.find{|s| s.name ==item_name}
    if item==nil
      resp.status = 400
+     resp.write "Item not found"
    else
    resp.write "#{item.price}"
   end
