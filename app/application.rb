@@ -6,10 +6,10 @@ def call(env)
  if req.path.match(/items/)
 
  else
+   resp.write "Route not found"
    resp.status = 404
  end
  resp.finish
-
 end
 
 
